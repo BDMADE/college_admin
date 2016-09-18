@@ -4,15 +4,15 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'college_admin/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "college_admin"
+  spec.name          = 'college_admin'
   spec.version       = CollegeAdmin::VERSION
-  spec.authors       = ["hmtanbir"]
-  spec.email         = ["tanbir2025@gmail.com"]
+  spec.authors       = ['hmtanbir']
+  spec.email         = ['tanbir2025@gmail.com']
 
   spec.summary       = %q{ Write a short summary, because Rubygems requires one.}
   spec.description   = %q{ Write a longer description or delete this line.}
-  spec.homepage      = "Put your gem's website or public repo URL here."
-  spec.license       = "MIT"
+  spec.homepage      = 'https://github.com/BDMADE'
+  spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.

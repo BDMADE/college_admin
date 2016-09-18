@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-<%= render partial: 'head' %>
+<%= render 'layouts/head' %>
 <body>
 <!-- Navigation Bar-->
-<%= render partial: 'header' %>
+<%= render  'layouts/header' %>
 <!-- End Navigation Bar-->
 <div class="wrapper">
   <div class="container">
     <%= yield %>
     <!-- Footer -->
-    <%= render partial: 'footer' %>
+    <%= render 'layouts/footer' %>
     <!-- End Footer -->
   </div>
 </div>
 <!-- jQuery  -->
-<%= render partial: 'js' %>
+<%= render 'layouts/js' %>
 
 
 </body>

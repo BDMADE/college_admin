@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<%= render partial: 'head' %>
+<body>
+<!-- Navigation Bar-->
+<%= render partial: 'header' %>
+<!-- End Navigation Bar-->
+<div class="wrapper">
+  <div class="container">
+    <%= yield %>
+    <!-- Footer -->
+    <%= render partial: 'footer' %>
+    <!-- End Footer -->
+  </div>
+</div>
+<!-- jQuery  -->
+<%= render partial: 'js' %>
+
+
+</body>
+</html>

@@ -25,6 +25,14 @@ Or install it yourself as:
 ## Usage
 From your controller just call this theme engine as:
  `layout 'college_admin'` 
+ 
+<h5>Change jquery version:</h5>
+ This template engine needs jquery2 version. So, you have to change 
+  jquery version.
+  
+  Open `application.js` in `app-> assets -> javascripts` folder.
+  Then, use `require jquery2` instead of `require jquery`
+  and restart in your system
 
 <h5>For adding logo:</h5>
 

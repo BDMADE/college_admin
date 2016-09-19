@@ -173,50 +173,6 @@ Write down this code in your `_nav.html.erb`:
     </ul>
   </li>
 
-<!--For a mega menu content-->
-  <li class="has-submenu">
-    <a href="#"><i class="zmdi zmdi-layers"></i>Components</a>
-    <ul class="submenu megamenu">
-      <li>
-        <ul>
-          <li>
-            <span>Elements</span>
-          </li>
-          <li><a href="#">Grid</a></li>
-          <li><a href="#">Widgets</a></li>
-          <li><a href="#">Nesteble</a></li>
-          <li><a href="#">Range sliders</a></li>
-
-        </ul>
-      </li>
-      <li>
-        <ul>
-          <li>
-            <span>Forms</span>
-          </li>
-          <li><a href="#">General Elements</a></li>
-          <li><a href="#">Advanced Form</a></li>
-          <li><a href="#">Form Validation</a></li>
-          <li><a href="#">Form Pickers</a></li>
-
-
-        </ul>
-      </li>
-
-      <li>
-        <ul>
-          <li>
-            <span>Design</span>
-          </li>
-          <li><a href="#">Form Masks</a></li>
-          <li><a href="#">Summernote</a></li>
-          <li><a href="#">Wysiwig Editors</a></li>
-          <li><a href="#">Multiple File Upload</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-
 
 <% end %>
 ```

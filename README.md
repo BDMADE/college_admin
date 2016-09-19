@@ -1,8 +1,10 @@
-# CollegeAdmin
+# College Admin Theme Engine
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/college_admin`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to College Admin theme. It is theme engine for making rails. It renders an administrator theme in your project.
 
-TODO: Delete this and the text above, and describe your gem
+# Demo
+Please visit this site to see it's [demo](https://ubold.herokuapp.com/)
+
 
 ## Installation
 
@@ -21,18 +23,221 @@ Or install it yourself as:
     $ gem install college_admin
 
 ## Usage
+From your controller just call this theme engine as:
+ `layout 'college_admin'` 
 
-TODO: Write usage instructions here
+<h5>For adding logo:</h5>
 
-## Development
+Step 1: 
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Make a file named `_logo.html.erb` in your `app->views->shared` folder.
+Write down this code in your `_logo.html.erb`:
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```
+<% content_for :logo do %>
+<div class="logo">
+  <a href="#" class="logo"><span>C<i class="zmdi zmdi-album"></i>llege</span></a>
+</div>
+<% end %>
+```
+You can alter the logo name and path
+
+Step 2: 
+
+Make file named `_extends_admin_layout.html.erb` in your `app->views->shared` folder.
+Then, write down this code in your `_extends_admin_layout.html.erb`
+
+```
+<%= render partial: 'shared/logo' %>
+```
+
+Step 3:
+
+Now, open in your all admin view files as example as `index.html.erb`, `edit.html.erb`, `show.html.erb` and `new.html.erb`, then write down
+given bellow code:
+
+```
+<%= render 'shared/extends_admin_layout' %>
+```
+
+
+<h5>For adding user profile:</h5>
+
+Step 1: 
+
+Make a file named `_profile.html.erb` in your `app->views->shared` folder.
+Write down this code in your `_profile.html.erb`:
+
+```
+<% content_for :profile do %>
+<li class="dropdown">
+  <a href="" class="dropdown-toggle waves-effect waves-light profile" data-toggle="dropdown" aria-expanded="true">
+  <%= image_tag 'users/avatar-1.jpg', class: 'img-circle' %>
+  </a>
+  <ul class="dropdown-menu">
+   <li><a href="#"><i class="ti-user m-r-5"></i> Profile</a></li>
+   <li><a href="#"><i class="ti-settings m-r-5"></i> Settings</a></li>
+   <li><a href="#"><i class="ti-lock m-r-5"></i> Lock screen</a></li>
+   <li><a href="#"><i class="ti-power-off m-r-5"></i> Logout</a></li>
+ </ul>
+</li>
+
+<% end %>
+```
+
+Step 2: 
+
+Make file named `_extends_admin_layout.html.erb` in your `app->views->shared` folder.
+Then, write down this code in your `_extends_admin_layout.html.erb`
+
+```
+<%= render partial: 'shared/profile' %>
+```
+
+Step 3:
+
+Now, open in your all admin view files as example as `index.html.erb`, `edit.html.erb`, `show.html.erb` and `new.html.erb`, then write down
+given bellow code:
+
+```
+<%= render 'shared/extends_admin_layout' %>
+```
+
+<h5>For adding search:</h5>
+
+Step 1: 
+
+Make a file named `_search.html.erb` in your `app->views->shared` folder.
+Write down this code in your `_search.html.erb`:
+
+```
+<% content_for :search do  %>
+<li>
+            <form role="search" class="navbar-left app-search pull-left hidden-xs">
+              <input type="text" placeholder="Search..." class="form-control">
+              <a href=""><i class="fa fa-search"></i></a>
+            </form>
+          </li>
+<% end %>
+```
+
+Step 2: 
+
+Make file named `_extends_admin_layout.html.erb` in your `app->views->shared` folder.
+Then, write down this code in your `_extends_admin_layout.html.erb`
+
+```
+<%= render partial: 'shared/search' %>
+```
+
+Step 3:
+
+Now, open in your all admin view files as example as `index.html.erb`, `edit.html.erb`, `show.html.erb` and `new.html.erb`, then write down
+given bellow code:
+
+```
+<%= render 'shared/extends_admin_layout' %>
+```
+
+
+<h5>For adding navigation:</h5>
+
+Step 1: 
+
+Make a file named `_nav.html.erb` in your `app->views->shared` folder.
+Write down this code in your `_nav.html.erb`:
+
+```
+<% content_for :nav do %>
+  <!--For a single menu content-->
+  <li class="has-submenu active">
+    <a href="#"><i class="zmdi zmdi-view-dashboard"></i>Dashboard</a>
+  </li>
+
+<!--For a normal menu content-->
+  <li class="has-submenu">
+    <a href="#"><i class="zmdi zmdi-palette"></i>UI Kit</a>
+    <ul class="submenu">
+      <li><a href="#">Portlets</a></li>
+      <li><a href="#">Checkboxs-Radios</a></li>
+      <li><a href="#">Tabs</a></li>
+      <li><a href="#">Modals</a></li>
+    </ul>
+  </li>
+
+<!--For a mega menu content-->
+  <li class="has-submenu">
+    <a href="#"><i class="zmdi zmdi-layers"></i>Components</a>
+    <ul class="submenu megamenu">
+      <li>
+        <ul>
+          <li>
+            <span>Elements</span>
+          </li>
+          <li><a href="#">Grid</a></li>
+          <li><a href="#">Widgets</a></li>
+          <li><a href="#">Nesteble</a></li>
+          <li><a href="#">Range sliders</a></li>
+
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>
+            <span>Forms</span>
+          </li>
+          <li><a href="#">General Elements</a></li>
+          <li><a href="#">Advanced Form</a></li>
+          <li><a href="#">Form Validation</a></li>
+          <li><a href="#">Form Pickers</a></li>
+
+
+        </ul>
+      </li>
+
+      <li>
+        <ul>
+          <li>
+            <span>Design</span>
+          </li>
+          <li><a href="#">Form Masks</a></li>
+          <li><a href="#">Summernote</a></li>
+          <li><a href="#">Wysiwig Editors</a></li>
+          <li><a href="#">Multiple File Upload</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+
+<% end %>
+```
+
+Step 2: 
+
+Make file named `_extends_admin_layout.html.erb` in your `app->views->shared` folder.
+Then, write down this code in your `_extends_admin_layout.html.erb`
+
+```
+<%= render partial: 'shared/nav' %>
+```
+
+Step 3:
+
+Now, open in your all admin view files as example as `index.html.erb`, `edit.html.erb`, `show.html.erb` and `new.html.erb`, then write down
+given bellow code:
+
+```
+<%= render 'shared/extends_admin_layout' %>
+```
+
+
+
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/college_admin. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on [GitHub](https://github.com/BDMADE/college_admin).This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

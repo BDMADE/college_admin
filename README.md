@@ -1,4 +1,4 @@
-# College Admin Theme Engine [![Build Status](https://travis-ci.org/BDMADE/college_admin.svg?branch=master)](https://travis-ci.org/BDMADE/college_admin) [![Gem Version](https://badge.fury.io/rb/college_admin.svg)](https://badge.fury.io/rb/college_admin)
+# College Admin Theme [![Build Status](https://travis-ci.org/BDMADE/college_admin.svg?branch=master)](https://travis-ci.org/BDMADE/college_admin) [![Gem Version](https://badge.fury.io/rb/college_admin.svg)](https://badge.fury.io/rb/college_admin)
 
 Welcome to College Admin theme. It is theme engine for making rails. It renders an administrator theme in your project.
 

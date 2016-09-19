@@ -1,10 +1,3 @@
-
-/**
-* Theme: Ubold Admin Template
-* Author: Coderthemes
-* Morris Chart
-*/
-
 !function($) {
     "use strict";
 

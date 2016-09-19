@@ -172,9 +172,8 @@ Write down this code in your `_nav.html.erb`:
       <li><a href="#">Modals</a></li>
     </ul>
   </li>
-
-
 <% end %>
+
 ```
 
 Step 2: 

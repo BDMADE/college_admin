@@ -9,9 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Hasan Mohammad Tanbir']
   spec.email         = ['tanbir2025@gmail.com']
 
-  spec.summary       = %q{ Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{ Write a longer description or delete this line.}
-  spec.homepage      = 'https://github.com/BDMADE'
+  spec.summary       = %q{ Rails admin theme engine.}
+  spec.description   = %q{ This admin theme engine is made for using admin panel in backend. It is a administrator basic layout, but you will
+create a huge materials design as like form,button etc. using this theme.}
+  spec.homepage      = 'https://github.com/BDMADE/college_admin'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -30,6 +31,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_development_dependency "rails", "~> 4.2.x"
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"

@@ -195,6 +195,46 @@ given bellow code:
 ```
 
 
+<h5>For adding footer:</h5>
+
+Step 1: 
+
+Make a file named `_footer.html.erb` in your `app->views->shared` folder.
+Write down this code in your `_footer.html.erb`:
+
+```
+<% content_for :footer do %>
+  <footer class="footer text-right">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <%= Time.now.year %> &copy; Admin
+        </div>
+      </div>
+    </div>
+  </footer>
+<% end %>
+
+```
+
+Step 2: 
+
+Make file named `_extends_admin_layout.html.erb` in your `app->views->shared` folder.
+Then, write down this code in your `_extends_admin_layout.html.erb`
+
+```
+<%= render partial: 'shared/footer' %>
+```
+
+Step 3:
+
+Now, open in your all admin view files as example as `index.html.erb`, `edit.html.erb`, `show.html.erb` and `new.html.erb`, then write down
+given bellow code:
+
+```
+<%= render 'shared/extends_admin_layout' %>
+```
+
 
 
 

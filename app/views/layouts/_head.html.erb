@@ -2,7 +2,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
-  <meta name="author" content="Coderthemes">
+  <meta name="author" content="bdthemes">
 
   <link rel="shortcut icon" href="<%= asset_path 'favicon_1.ico' %>">
 
@@ -14,10 +14,10 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
   <%= csrf_meta_tags %>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> 'reload' %>
 
-
-  <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track' => true %>
+  <%= render  'layouts/inline_css' %>
 
   <!-- fonts start -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.css">
